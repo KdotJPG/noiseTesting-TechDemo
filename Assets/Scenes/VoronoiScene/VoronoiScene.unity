@@ -330,18 +330,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_text
-      value: 'r -> remap
+      value: 'r -> regenerate map
 
         h -> toggle sprite
 
-        b-> toggle blue noise
+        b -> toggle
+        blue noise
 
-        c->
-        toggle trees/cylinders
+        c -> toggle trees/cylinders
 
         f -> toggle fog
 
-        p -> toggle perlin'
+        g
+        -> toggle gradient/simplex noise'
       objectReference: {fileID: 0}
     - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_margin.z
@@ -362,6 +363,10 @@ PrefabInstance:
     - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159195980667990147, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -497,10 +502,10 @@ MonoBehaviour:
   pathThreshold: 0.8
   regionAmount: 30
   voronoiScale: 0.08
-  perlinNoise: 0
+  gradientNoise: 0
   blueNoise: 0
-  intensity: 1
-  perlinScale: 0.03
+  intensity: 0.8
+  gradientNoiseScale: 0.0225
   pathPositions:
   - {x: 7, y: 0}
   - {x: 55, y: 0}
@@ -13366,7 +13371,7 @@ MonoBehaviour:
   - {fileID: 151704548082302931, guid: 5e21bbbd8fca14e64aa2aba509ab84a6, type: 3}
   - {fileID: 740128349581396468, guid: 7f7e69905361b45ad9e10b35992cc61f, type: 3}
   debugCylinder: {fileID: 2657324454182761395, guid: 87c3ff8a0aa864bb5a8455b4ca7d1393, type: 3}
-  pointAmount: 9999
+  pointCount: 9999
   distance: 8
   dimension: 256
 --- !u!1 &1534017573

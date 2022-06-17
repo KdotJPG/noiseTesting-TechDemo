@@ -376,19 +376,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ed5e699dd824e5791c942065079a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomize: 1
+  randomize: 0
   scroll: 0
-  height: 100
+  noiseBaseScale: 0.01
+  height: 80
   scrollSpeed: 3
   terrainDimension: 256
   voxel: 0
   voxelDecimal: 2
-  noise01Scale: 4
+  is3DNoiseModeEnabled: 0
+  scrollOffset: 0
+  noise01Seed: 0
+  noise01Scale: 3
   hardness: 0.25
   offsetX01: 0
   offsetY01: 0
-  includeThis: 0
-  noise02Scale: 0.8
+  includeLayer2: 0
+  noise02Seed: 1
+  noise02Scale: 0.6
   offsetX02: 0
   offsetY02: 0
   terrain: {fileID: 1198611223}
@@ -525,24 +530,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_text
-      value: 'r -> remap
+      value: 'r -> regenerate map
 
         z -> toggle random
 
-        x -> toggle scroll
+        x -> toggle
+        scroll
 
-        e
-        -> toggle perlin02
+        e -> toggle second layer
 
-        + -> +strenght
+        v -> toggle 3D noise mode
 
-        - -> -strenght
+        +
+        -> +strength
+
+        - -> -strength
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_margin.z
       value: -59.582436
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159195980667990144, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159195981345774059, guid: ae33982b42a504e37853a3014a26ef56, type: 3}
       propertyPath: m_LocalPosition.x
